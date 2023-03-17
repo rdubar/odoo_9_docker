@@ -23,12 +23,15 @@ official Odoo Docker image at: https://hub.docker.com/_/odoo
 To see the names of your services, check the server logs, 
 stop the server, and restart it with logging:
 ```
-docker ps
-
+docker psdockee
 docker-compose up -d
 
 docker logs odoo9-web-1
 
 docker stop odoo9-web-1
 docker start -a odoo9-web-1
+```
+Log into the container as root:
+```
+docker exec -it -u 0 odoo9-web-1 /bin/bash
 ```
